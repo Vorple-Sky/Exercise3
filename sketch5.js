@@ -9,7 +9,7 @@ function setup() {
     let cnv = createCanvas(windowWidth, windowHeight);
     cnv.parent('mySketch');
 
-    result = createElement('p', 'How do you feel?');
+    result = createElement('p', 'Where are you?');
     result.style('font-size', '30px');
     result.style('margin', '0px');
     result.style('text-align', 'center');
@@ -33,7 +33,7 @@ function setup() {
   }
   
   function draw() {
-    background(201, 143, 186);
+    background(99, 97, 99);
   }
   
   function windowResized() {
@@ -58,17 +58,14 @@ function output() {
   colorInput.appendChild(Answer1);
   //Answer1.innerHTML = answers;
 
-  if (answers == "okay"){
-    Answer1.innerHTML = "alright";
-  } else if (answers == "concerned"){
-    Answer1.innerHTML = "I wonder why...";
-    let a = createA('index5.html', 'next');
-    a.id('next');
-    colorInput.appendChild(next);
-  } else if (answers == "bad"){
-    Answer1.innerHTML = "I'm sorry";
-  } else if (answers == "happy"){
+  if (answers == "here"){
+    Answer1.innerHTML = "Where is here?";
+  } else if (answers == "nowhere"){
     Answer1.innerHTML = "Are you?";
+  } else if (answers == "somewhere"){
+    Answer1.innerHTML = "Somewhere is a place";
+  } else if (answers == "home"){
+    Answer1.innerHTML = "I can see you.";
   }else {
     Answer1.innerHTML = "i don't know that answer";
   }
