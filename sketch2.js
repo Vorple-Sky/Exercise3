@@ -9,7 +9,7 @@ function setup() {
     let cnv = createCanvas(windowWidth, windowHeight);
     cnv.parent('mySketch');
 
-    result = createElement('p', 'type a color');
+    result = createElement('p', 'Who are you?');
     result.style('font-size', '30px');
     result.style('margin', '0px');
     result.style('text-align', 'center');
@@ -33,7 +33,7 @@ function setup() {
   }
   
   function draw() {
-
+    background(157, 161, 168);
   }
   
   function windowResized() {
@@ -58,22 +58,18 @@ function output() {
   colorInput.appendChild(Answer1);
   //Answer1.innerHTML = answers;
 
-  if (answers == "blue"){
-    background(0,0,255);
-    Answer1.innerHTML = answers;
+  if (answers == "you"){
+    Answer1.innerHTML = "couldn't be me";
+  } else if (answers == "me"){
+    Answer1.innerHTML = "Has to be you";
     let a = createA('index2.html', 'next');
     a.id('next');
     colorInput.appendChild(next);
-  } else if (answers == "red"){
-    background(255,0,0);
-    Answer1.innerHTML = answers;
-  } else if (answers == "green"){
-    background(0,255,0);
-    Answer1.innerHTML = answers;
-  } else if (answers == "magenta"){
-    background(255,0,255);
-    Answer1.innerHTML = answers;
+  } else if (answers == "nobody"){
+    Answer1.innerHTML = "hmmmm";
+  } else if (answers == "somebody"){
+    Answer1.innerHTML = "This is true";
   }else {
-    Answer1.innerHTML = "i don't know that color";
+    Answer1.innerHTML = "i don't know that answer";
   }
 }
