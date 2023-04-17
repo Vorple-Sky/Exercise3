@@ -9,7 +9,7 @@ function setup() {
     let cnv = createCanvas(windowWidth, windowHeight);
     cnv.parent('mySketch');
 
-    result = createElement('p', 'Who are you?');
+    result = createElement('p', 'Are you human?');
     result.style('font-size', '30px');
     result.style('margin', '0px');
     result.style('text-align', 'center');
@@ -33,7 +33,7 @@ function setup() {
   }
   
   function draw() {
-    background(157, 161, 168);
+    background(201, 180, 149);
   }
   
   function windowResized() {
@@ -58,17 +58,17 @@ function output() {
   colorInput.appendChild(Answer1);
   //Answer1.innerHTML = answers;
 
-  if (answers == "you"){
-    Answer1.innerHTML = "couldn't be me";
-  } else if (answers == "me"){
-    Answer1.innerHTML = "Has to be you";
-    let a = createA('index3.html', 'next');
+  if (answers == "i think so"){
+    Answer1.innerHTML = "are you sure";
+  } else if (answers == "i don't know"){
+    Answer1.innerHTML = "do any of us?";
+    let a = createA('index4.html', 'next');
     a.id('next');
     colorInput.appendChild(next);
-  } else if (answers == "nobody"){
-    Answer1.innerHTML = "hmmmm";
-  } else if (answers == "somebody"){
-    Answer1.innerHTML = "This is true";
+  } else if (answers == "no"){
+    Answer1.innerHTML = "I can't tell if you're lying";
+  } else if (answers == "probably"){
+    Answer1.innerHTML = "figured";
   }else {
     Answer1.innerHTML = "i don't know that answer";
   }
